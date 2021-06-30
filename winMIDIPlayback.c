@@ -1,7 +1,17 @@
 #include <windows.h>
-// #include <mmeapi.h>
 #include <stdio.h>
-#include <conio.h>
+#include <conio.h>	// To handle keyboard input
+
+/************************
+* Author: Denis Laesker *   
+* ***********************
+* Filename: winMIDIPlayback.c
+
+Description: This file provides a highly descriptive way to read in MIDI messages from an input device, which can then be heard back using a handle to a MIDI output device. Nothing too fancy here, but I stuck with the default GS Wavetable Synth.
+
+Compiled using MinGW as: gcc winMIDIPlayback.c -lwinmm -o midiPlayback 
+*/
+
 
 void CALLBACK MidiInProc(
 	HMIDIIN   hMidiIn,		// Handle to the MIDI input device.
